@@ -1,0 +1,605 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Venor - Multipurpose CMS Script</title>
+
+	<meta name="description" content="Thank you for purchasing Venor. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form. Thanks so much!">
+	<meta name="author" content="SweetThemes">
+	<meta name="copyright" content="SweetThemes">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2018-08-08T00:00:00+01:00">
+
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+
+	<script type="text/javascript" src="js/jquery.1.6.4.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<link rel="shortcut icon" type="image/x-icon" href="css/favicon.png" />
+
+
+	<style>
+		body p,
+		body li,
+		body a{
+			font-size: 14px;
+			line-height: 1.5;
+		}
+		html {
+			background-color: #FFFFFF;
+			color: #383838;
+			font-size: 14px;
+		}
+
+		::-moz-selection {
+			background: #333636;
+			color: #00DFFC;
+		}
+
+		::selection {
+			background: #333636;
+			color: #00DFFC;
+		}
+
+		#documenter_sidebar #documenter_logo {
+			background-image: url(assets/images/venor-logo.svg);		
+     		background-size: 160px;
+		}
+
+		a {
+			color: #008C9E;
+		}
+
+		hr {
+			border-top: 1px solid #D4D4D4;
+			border-bottom: 1px solid #FFFFFF;
+		}
+
+		.shadow {
+			box-shadow: 0 2px 8px 2px #e1e6ea;
+			width: 100%;
+		}
+
+		#documenter_sidebar,
+		#documenter_sidebar ol a {
+			background-color: transparent;
+			color: #FFFFFF;
+			font-size: 12px;
+		}
+
+		#documenter_sidebar ol a {}
+
+		#documenter_sidebar ol {}
+
+		#documenter_sidebar ol a {
+			color: #FFFFFF;
+		}
+
+		#documenter_sidebar ol a:hover {
+		    background: #fff;
+		    color: #000;
+		}
+
+		#documenter_sidebar ol a.current {
+		    background: #fff;
+		    color: #000;
+		}
+
+		#documenter_copyright {
+			display: block !important;
+			visibility: visible !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li>
+				<a class="current" href="#documenter_cover">Getting Started</a>
+			</li>
+			<li>
+				<a href="#installationFTP">Migrate files using FTP</a>
+			</li>
+			<li>
+				<a href="#installationCPANEL">Migrate files using Cpanel</a>
+			</li>
+			<li>
+				<a href="#importDB">Import/Configure Database</a>
+			</li>
+			<li>
+				<a href="#first-steps">First Steps</a>
+			</li>
+			<li>
+				<a href="#manage-users">Manage Users</a>
+			</li>
+			<li>
+				<a href="#media-images">Upload/View/Delete Media</a>
+			</li>
+			<li>
+				<a href="#manage-pages">Manage pages</a>
+			</li>
+			<li>
+				<a href="#manage-posts">Manage posts</a>
+			</li>
+			<li>
+				<a href="#manage-projects">Manage projects</a>
+			</li>
+			<li>
+				<a href="#sources-and-credits">Sources and Credits</a>
+			</li>
+		</ol>
+		<div id="documenter_copyright">Copyright SweetThemes 2021
+			<br> made with the
+			<a href="http://rxa.li/documenter">Documenter</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+		<section id="documenter_cover">
+			<h1>Venor</h1>
+			<h2>Multipurpose CMS Script</h2>
+			<hr>
+			<ul>
+				<li>By: SweetThemes</li>
+				<li>
+					<a href=""></a>
+				</li>
+				<li>Support:
+					<a href="mailto:sweet.themes.supp@gmail.com">sweet.themes.supp@gmail.com</a>
+				</li>
+			</ul>
+			<p>Thank you for purchasing Venor. If you have any questions that are beyond the scope of this help file, please
+				feel free to email us. Thanks so much!</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<h1>System Requrements</h1>
+			<hr class="notop">
+			<h4>Your server need to meet the following requirements in order to run Venor</h4>
+			<ul style="margin: 0px 1.5em 1.5em 3.5em; padding: 0px; border: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 19px;">
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					PHP >= 7.3</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					MYSQL 5+</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					OpenSSL PHP Extension</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					PDO PHP Extension</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Mbstring PHP Extension</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Tokenizer PHP Extension</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					XML PHP Extension</li>
+			</ul>
+			<h4>Optional Requirements:</h4>
+			<ul style="margin: 0px 1.5em 1.5em 3.5em; padding: 0px; border: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 19px;">
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Composer</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					NPM / YARN</li>
+			</ul>
+			<p>
+				For More Info: <a target="_blank" href="https://laravel.com/docs/5.4/installation">Here</a></p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		</section>
+
+		<section id="installationFTP">
+			<h1>Migrate files using any FTP program (ie. FileZilla) or the webinterface of your webhost</h1>
+			<p>Migrate folders and files from zip file(venor.zip) with any FTP program (ie. FileZilla) or the webinterface of your webhost.</p>
+			<ol>
+				<li>
+					<p>
+						Connect to your web server using any FTP program (ie. FileZilla) or the webinterface of your webhost and upload all files and folders <br> which are inside the "Venor" folder from the .zip file you have downloaded from Codecanyon and put in the public_html folder.
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m7.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						The folder "public_html" and it's subfolders must have write permissions, so just give the folder write permissions (777). 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m7a.jpg">
+					</p>
+				</li>
+			</ol>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+	 	</section>
+
+		<section id="installationCPANEL">
+			<h1>Migrate project files via Cpanel</h1>
+			<p>Migrate folders and files from zip file(venor.zip) with Cpanel.</p>
+			<hr class="notop">
+			<ol>
+				<li>
+					<p>
+						Access your Cpanel account and login in with your credentials. Then go to File Manager. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m1.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						Go to public_html folder. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m3.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						Upload " Venor" the .zip file you have downloaded from Codecanyon.
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m4.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						Extract "Venor" .zip file you have downloaded from Codecanyon.
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m5.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						Your public_html folder should have all these files and folders.
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m6.jpg">
+					</p>
+				</li>
+			</ol>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+				&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+			<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		</section>
+
+	 	<section id="importDB">
+			<h1>Creating the Database for the application from Cpanel</h1>
+			<h4>Create/Configure/Import the database</h4>
+			<h4>I. Create Database</h4>
+			<ul>
+				<li>
+					<p>
+						Create the database using MySQL® Database Wizard
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m10.jpg">
+						<br>
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m11.jpg">
+						<br>
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m12.jpg">
+						<br>
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m13.jpg">
+					</p>
+				</li>
+			</ul>
+			<h4>II. Import Database</h4>
+			<ul>
+				<li>
+					<p>
+						Import the database 'Venor.sql' from the package you have downloaded from Codecanyon. 
+					</p>
+				</li>
+			</ul>
+			<h4>III. Configure the .env file</h4>
+			<ol>
+				<li>
+					<p>
+						Make sure that we have the 'show hidden files' checked
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m15.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						Edit the .env file and paste the correct credentials
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m16.jpg">
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m17.jpg">
+					</p>
+				</li>
+			</ol>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+			<p>
+				&nbsp;</p>
+		</section>
+
+		<section id="first-steps">
+			<h1>First steps</h1>
+			<ol>
+				<li>
+					<p>
+						 For login as administrator you need to purchase this script. Thank You !
+						<br>
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m20.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						This is the dashboard page
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m21.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<section id="manage-users">
+			<h1>Manage users</h1>
+			<ol>
+				<li>
+					<p>
+						1. When get to the dashboard you can edit/update your personal information. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m22.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						2. View all users. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m23.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						3. Create users. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m24.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<section id="media-images">
+			<h1>View/delete/upload media/images.</h1>
+				<li>
+					<p>
+						1. View and delete images from media. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m25.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						2. Upload images to media. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m26.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<section id="manage-pages">
+			<h1>Manage pages</h1>
+				<li>
+					<p>
+						1. View and delete pages
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m27.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						2. Create page. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m28.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<section id="manage-posts">
+			<h1>Manage posts</h1>
+				<li>
+					<p>
+						1. View and delete posts
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m29.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						2. Create post. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m30.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<section id="manage-projects">
+			<h1>Manage projects</h1>
+				<li>
+					<p>
+						1. View and delete projects 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m32.jpg">
+					</p>
+				</li>
+				<li>
+					<p>
+						2. Create project. 
+						<br> &nbsp;
+						<img style="max-width:800px;margin-top:30px" src="assets/images/m36.jpg">
+					</p>
+				</li>
+			</ol>
+		</section>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		&nbsp;</p>
+		<section id="sources-and-credits">
+			<h1>Sources and Credits</h1>
+			<hr class="notop">
+			<p>
+				I&#39;ve used the following images, icons or other files as listed.</p>
+			<ul style="margin-left: 40px;">
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Laravel 8 - PHP Framework |&nbsp;
+					<a href="https://laravel.com/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">Laravel</a>
+				</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					jQuery - Javascript Framework |&nbsp;
+					<a href="http://www.jquery.com/" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">jQuery</a>
+				</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					startbootstrap |&nbsp;
+					<a href="#0" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153);">startbootstrap MIT license</a>
+				</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Bootstrap - HTML Framework |
+					<a href="http://twitter.github.com/bootstrap">Bootstrap</a>
+				</li>
+				<li style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+					Unsplash |
+					<a href="https://unsplash.com/">Unsplash</a>
+				</li>
+			</ul>
+			<hr>
+			<p>
+				Once again, thank you so much for purchasing Venor. As I said at the beginning, I&#39;d be glad to help you if
+				you have any questions relating to this theme. No guarantees, but I&#39;ll do my best to assist.&nbsp;</p>
+			<p>
+				<strong>SweetThemes</strong>
+			</p>
+		</section>
+
+	</div>
+</body>
+
+</html>
